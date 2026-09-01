@@ -1,0 +1,22 @@
+name: 🔍 調査・技術検証 (Spike)
+description: 開発前の仕様調査や、技術的なスパイク（プロトタイプ検証）
+title: "[SPIKE]: "
+labels: ["question"]
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: 🎯 調査の目的・ゴール
+      placeholder: 「何が分かったら、この調査タスクを完了（Close）とするか」の定義を書いてください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: research_points
+    attributes:
+      label: 📝 調査したい項目
+      placeholder: |
+        - 〇〇ライブラリと✕✕ライブラリの機能比較
+        - 現在のシステムに導入した際の影響範囲
+    validations:
+      required: true

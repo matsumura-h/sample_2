@@ -1,0 +1,24 @@
+name: 📦 リリース作業 (Release)
+description: 本番環境へのデプロイ手順とチェックリスト
+title: "[RELEASE]: v"
+labels: ["documentation"]
+body:
+  - type: textarea
+    id: release_notes
+    attributes:
+      label: 🏷️ リリース内容の概要
+      placeholder: 今回のリリースに含まれる主な機能や修正。関連PRのリンクなど。
+
+  - type: checkboxes
+    id: release_check
+    attributes:
+      label: 🚨 リリース作業チェックリスト
+      options:
+        - label: 事前に本番データベースのバックアップを取得した
+          required: true
+        - label: mainブランチのビルド（CI）が正常に通っていることを確認した
+          required: true
+        - label: デプロイコマンドを実行した
+          required: true
+        - label: 本番環境を開き、主要な画面が正常に動くことを確認した
+          required: true

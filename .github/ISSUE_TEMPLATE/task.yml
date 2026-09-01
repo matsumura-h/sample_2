@@ -1,0 +1,24 @@
+name: 🛠️ 作業タスク (Task / Chore)
+description: リファクタリング、ライブラリ更新、環境構築などの作業
+title: "[TASK]: "
+labels: ["task"] # 事前にリポジトリで「task」ラベルを作っておくと自動付与されます
+body:
+  - type: textarea
+    id: overview
+    attributes:
+      label: 📝 作業の概要
+      placeholder: 何を行うためのタスクか、簡潔に教えてください。
+    validations:
+      required: true
+
+  - type: textarea
+    id: todo
+    attributes:
+      label: ✅ やることリスト (TODO)
+      description: 完了に必要な具体的な手順を箇条書きで記入してください。
+      placeholder: |
+        - [ ] 〇〇ライブラリを最新バージョンに更新
+        - [ ] ローカル環境で動作確認
+        - [ ] 影響範囲のドキュメント（README等）を更新
+    validations:
+      required: true
