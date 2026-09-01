@@ -1,22 +1,45 @@
-name: 🐛 バグ報告 (フォーム版)
-description: 不具合の報告はこちらから
+name: 🐛 バグ報告
+description: 不具合の報告はこちらからお願いします
 title: "[BUG]: "
 labels: ["bug"]
 body:
+  - type: markdown
+    attributes:
+      value: "不具合を見つけていただきありがとうございます！以下のフォームへのご協力をお願いします。"
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 📝 不具合の概要
+      placeholder: 何が起きているかを簡潔に教えてください
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: 💻 発生した環境
+      options:
+        - 本番環境
+        - ステージング環境
+        - ローカル環境
+    validations:
+      required: true
+
   - type: textarea
     id: steps
     attributes:
       label: 🔍 再現手順
-      description: どのような操作をしてバグが発生したか、順序立てて教えてください。
       placeholder: |
         1. 〇〇画面を開く
         2. 〇〇ボタンをクリックする
     validations:
       required: true
-  - type: textarea
-    id: actual
+
+  - type: checkboxes
+    id: checklist
     attributes:
-      label: 🚨 実際の挙動・エラー内容
-      placeholder: 画面のスクリーンショットの貼り付けや、ログの書き込みをお願いします。
-    validations:
-      required: false
+      label: ✅ 事前確認
+      options:
+        - label: 最新のmasterブランチでもこの不具合が発生することを確認しました
+          required: true
