@@ -1,0 +1,22 @@
+name: 🐛 バグ報告 (フォーム版)
+description: 不具合の報告はこちらから
+title: "[BUG]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: steps
+    attributes:
+      label: 🔍 再現手順
+      description: どのような操作をしてバグが発生したか、順序立てて教えてください。
+      placeholder: |
+        1. 〇〇画面を開く
+        2. 〇〇ボタンをクリックする
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 🚨 実際の挙動・エラー内容
+      placeholder: 画面のスクリーンショットの貼り付けや、ログの書き込みをお願いします。
+    validations:
+      required: false
